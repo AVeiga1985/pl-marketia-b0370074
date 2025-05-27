@@ -5,20 +5,20 @@ const TrustSection = () => {
   const trustBlocks = [
     {
       icon: Shield,
-      title: "Segurança de Dados",
-      description: "Criptografia de ponta a ponta, conformidade LGPD/GDPR e infraestrutura com certificação SOC 2. Seus dados estão protegidos com os mais altos padrões de segurança.",
+      title: "Segurança de Dados Robusta",
+      description: "Utilizamos as mais recentes tecnologias de encriptação e medidas de segurança para proteger suas informações.",
       features: ["Criptografia AES-256", "Compliance LGPD", "Certificação SOC 2", "Backup automático"]
     },
     {
       icon: Scale,
-      title: "IA Ética",
-      description: "Desenvolvimento responsável com transparência algorítmica, mitigação de vieses e supervisão humana contínua para decisões justas e explicáveis.",
+      title: "IA Ética e Responsável",
+      description: "Nosso compromisso é com a justiça, transparência e responsabilidade em todas as nossas soluções de IA.",
       features: ["Algoritmos transparentes", "Auditoria de vieses", "Supervisão humana", "Decisões explicáveis"]
     },
     {
       icon: TrendingUp,
-      title: "Escalabilidade",
-      description: "Arquitetura cloud-native que cresce com seu negócio. Processamento de milhões de dados sem perda de performance e atualizações automáticas.",
+      title: "Escalabilidade e Futuro Garantido",
+      description: "Nossas soluções são projetadas para crescer com seu negócio e se adaptar às futuras demandas do mercado.",
       features: ["Cloud-native", "Auto-scaling", "99.9% uptime", "Atualizações contínuas"]
     }
   ];

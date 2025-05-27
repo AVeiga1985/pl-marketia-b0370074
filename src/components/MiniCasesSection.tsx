@@ -1,63 +1,24 @@
 
-import { Building2, ShoppingCart, Factory, TrendingUp } from "lucide-react";
+import { Scissors } from "lucide-react";
 
 const MiniCasesSection = () => {
   const cases = [
     {
-      icon: Building2,
-      company: "TechCorp",
-      segment: "Tecnologia B2B",
-      challenge: "Processo de qualificação de leads completamente manual, resultando em 60% dos leads sendo descartados sem análise adequada e vendedores gastando 4h/dia em tarefas administrativas.",
-      solution: "Implementamos IA de scoring preditivo com processamento de linguagem natural para análise automática de perfil, comportamento e intenção de compra em tempo real.",
+      icon: Scissors,
+      company: "Studio de Beleza",
+      segment: "Serviços de Estética",
+      challenge: "Atendente não dava conta de atender vários clientes que chegavam ao mesmo tempo por vários canais de redes sociais como WhatsApp e Instagram. O que ocasionava demora no atendimento dos leads. Além de ter que fazer os agendamentos manualmente. E os clientes que chegavam após o expediente tinham que esperar até o outro dia para serem atendidos.",
+      solution: "Nos proporcionou atendimento imediato, qualificação eficiente, disponibilidade 24/7 e otimização de agendamentos. Tudo isso sem aumentar despesas fixas.",
       results: [
-        "+87% leads qualificados",
-        "70% redução no tempo de qualificação",
-        "+45% conversão vendas"
+        "95% redução no tempo de espera",
+        "75% aumento na qualificação de leads",
+        "100% mais leads fora do horário comercial",
+        "Economia de várias horas manuais/semana"
       ],
-      highlight: "+87%",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: ShoppingCart,
-      company: "RetailMax",
-      segment: "E-commerce",
-      challenge: "Taxa de abandono de carrinho de 73% e personalização limitada resultando em baixa conversão e experiência genérica para diferentes segmentos de clientes.",
-      solution: "Desenvolvemos sistema de recomendação inteligente com análise comportamental em tempo real e automação de recuperação de carrinho personalizada.",
-      results: [
-        "+62% conversão do carrinho",
-        "35% aumento no ticket médio",
-        "+128% engagement personalizado"
-      ],
-      highlight: "+62%",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Factory,
-      company: "IndustryPro",
-      segment: "Manufatura",
-      challenge: "Manutenção reativa custando R$ 2.3M/ano em paradas não programadas e dificuldade para prever falhas em equipamentos críticos da linha de produção.",
-      solution: "Implantamos IA preditiva com sensores IoT e machine learning para monitoramento contínuo e predição de falhas com 95% de precisão.",
-      results: [
-        "89% redução paradas não programadas",
-        "R$ 1.8M economia anual",
-        "+40% eficiência operacional"
-      ],
-      highlight: "R$ 1.8M",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: TrendingUp,
-      company: "FinanceNext",
-      segment: "Serviços Financeiros",
-      challenge: "Análise de risco de crédito manual demorava 5 dias, resultando em perda de clientes para concorrentes mais ágeis e decisões imprecisas.",
-      solution: "Criamos modelo de IA para análise de risco em tempo real, processando 200+ variáveis e histórico comportamental para decisões instantâneas.",
-      results: [
-        "Análise de 5 dias para 30 segundos",
-        "+23% precisão na análise de risco",
-        "92% satisfação do cliente"
-      ],
-      highlight: "30 seg",
-      color: "from-orange-500 to-red-500"
+      testimonial: "Desde que a MarketIA implementou o agente de IA, nosso atendimento se transformou! Conseguimos atender a todos os clientes rapidamente, em qualquer horário, e os agendamentos são feitos de forma automática. Nossos leads estão mais satisfeitos e nossa equipe mais produtiva.",
+      author: "Rosana Ribeiro, dona, Studio Rosana Ribeiro",
+      highlight: "95%",
+      color: "from-pink-500 to-rose-500"
     }
   ];
 
@@ -73,7 +34,7 @@ const MiniCasesSection = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-1 gap-8 max-w-4xl mx-auto">
           {cases.map((case_, index) => (
             <div 
               key={index}
@@ -98,14 +59,14 @@ const MiniCasesSection = () => {
               
               {/* Solution */}
               <div className="mb-8">
-                <h4 className="text-blue-400 font-medium mb-3 text-lg">Solução Aplicada:</h4>
+                <h4 className="text-blue-400 font-medium mb-3 text-lg">Solução MarketIA:</h4>
                 <p className="text-gray-300 leading-relaxed font-light">{case_.solution}</p>
               </div>
               
               {/* Results */}
-              <div className="mb-6">
+              <div className="mb-8">
                 <h4 className="text-green-400 font-medium mb-4 text-lg">Resultados:</h4>
-                <div className="grid grid-cols-1 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {case_.results.map((result, resultIndex) => (
                     <div key={resultIndex} className="bg-gray-800/50 rounded-xl p-4 border border-gray-700">
                       <span className="text-white font-medium">{result}</span>
@@ -114,10 +75,20 @@ const MiniCasesSection = () => {
                 </div>
               </div>
               
+              {/* Testimonial */}
+              {case_.testimonial && (
+                <div className="mb-6">
+                  <div className="bg-gray-800/30 rounded-xl p-6 border border-gray-700">
+                    <p className="text-gray-300 italic leading-relaxed mb-4">"{case_.testimonial}"</p>
+                    <p className="text-gray-400 text-sm font-medium">— {case_.author}</p>
+                  </div>
+                </div>
+              )}
+              
               {/* Highlight */}
               <div className={`bg-gradient-to-r ${case_.color} p-6 rounded-2xl text-center`}>
                 <div className="text-3xl font-bold text-white mb-2">{case_.highlight}</div>
-                <div className="text-white/80 font-light">Resultado Principal</div>
+                <div className="text-white/80 font-light">Redução no Tempo de Espera</div>
               </div>
             </div>
           ))}
