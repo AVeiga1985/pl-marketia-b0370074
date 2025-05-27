@@ -2,6 +2,11 @@
 import HeroSection from "@/components/HeroSection";
 import ChallengesSection from "@/components/ChallengesSection";
 import SolutionsSection from "@/components/SolutionsSection";
+import MiniCasesSection from "@/components/MiniCasesSection";
+import TrustSection from "@/components/TrustSection";
+import DifferentialsSection from "@/components/DifferentialsSection";
+import FinalCtaSection from "@/components/FinalCtaSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -9,6 +14,11 @@ const Index = () => {
       <HeroSection />
       <ChallengesSection />
       <SolutionsSection />
+      <MiniCasesSection />
+      <TrustSection />
+      <DifferentialsSection />
+      <FinalCtaSection />
+      <Footer />
     </div>
   );
 };
