@@ -24,13 +24,13 @@ const TrustSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-32 bg-black">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-thin text-white mb-6">
-            Confiança e <span className="text-red-500 glow-red">Transparência</span>
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-7xl font-thin text-white mb-8 tracking-tight">
+            Confiança e <span className="text-red-500 glow-red font-extralight">Transparência</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
+          <p className="text-xl text-gray-400 max-w-4xl mx-auto font-light leading-relaxed">
             Princípios fundamentais que guiam todas as nossas soluções de IA
           </p>
         </div>
@@ -39,19 +39,20 @@ const TrustSection = () => {
           {trustBlocks.map((block, index) => (
             <div 
               key={index}
-              className="bg-gray-900/30 backdrop-blur-sm rounded-3xl p-8 border border-gray-800 hover:border-red-500/30 transition-all duration-300 text-center group"
+              className="bg-gray-900/20 backdrop-blur-sm rounded-3xl p-8 border border-gray-800 hover:border-red-500/50 transition-all duration-700 text-center group hover:transform hover:-translate-y-6 hover:shadow-2xl hover:shadow-red-500/20"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="bg-gray-800/50 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-red-500/20 transition-colors duration-300">
-                <block.icon className="w-10 h-10 text-red-500" />
+              <div className="bg-gray-800/30 w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:bg-red-500/20 transition-all duration-500 border border-gray-700 group-hover:border-red-500/50 group-hover:scale-110">
+                <block.icon className="w-12 h-12 text-red-500 group-hover:animate-pulse" />
               </div>
               
-              <h3 className="text-2xl font-semibold text-white mb-4">{block.title}</h3>
-              <p className="text-gray-400 leading-relaxed mb-8 font-light">{block.description}</p>
+              <h3 className="text-2xl font-light text-white mb-6">{block.title}</h3>
+              <p className="text-gray-400 leading-relaxed mb-10 font-light text-lg">{block.description}</p>
               
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {block.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="bg-gray-800/30 rounded-xl p-3 border border-gray-700">
-                    <span className="text-gray-300 font-medium">{feature}</span>
+                  <div key={featureIndex} className="bg-gray-800/20 rounded-2xl p-4 border border-gray-700 hover:border-red-500/30 transition-colors duration-300">
+                    <span className="text-gray-300 font-light">{feature}</span>
                   </div>
                 ))}
               </div>

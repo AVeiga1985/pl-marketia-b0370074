@@ -42,13 +42,13 @@ const ChallengesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-32 bg-gray-950">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Problemas Que <span className="text-red-600">Custam Caro</span> Para Seu Negócio
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-7xl font-thin text-white mb-8 tracking-tight">
+            Problemas Que <span className="text-red-500 glow-red font-extralight">Custam Caro</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-4xl mx-auto font-light leading-relaxed">
             Empresas que não adotam IA perdem competitividade e oportunidades diariamente. 
             Reconhece algum destes desafios na sua operação?
           </p>
@@ -58,17 +58,18 @@ const ChallengesSection = () => {
           {challenges.map((challenge, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-red-500 group hover:transform hover:-translate-y-2"
+              className="bg-black/40 backdrop-blur-sm rounded-3xl p-8 border border-gray-800 hover:border-red-500/50 transition-all duration-500 group hover:transform hover:-translate-y-4 hover:shadow-2xl hover:shadow-red-500/10"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start gap-4">
-                <div className="bg-red-100 p-3 rounded-lg group-hover:bg-red-200 transition-colors duration-300">
-                  <challenge.icon className="w-6 h-6 text-red-600" />
+              <div className="flex items-start gap-6">
+                <div className="bg-gray-900/50 p-4 rounded-2xl group-hover:bg-red-500/20 transition-all duration-500 border border-gray-700 group-hover:border-red-500/50">
+                  <challenge.icon className="w-8 h-8 text-red-500 group-hover:animate-pulse" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">{challenge.title}</h3>
-                  <p className="text-slate-600 mb-4 leading-relaxed">{challenge.description}</p>
-                  <div className="bg-red-50 px-3 py-2 rounded-lg">
-                    <span className="text-red-700 font-semibold text-sm">{challenge.impact}</span>
+                  <h3 className="text-2xl font-light text-white mb-4 group-hover:text-red-100 transition-colors duration-300">{challenge.title}</h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed font-light">{challenge.description}</p>
+                  <div className="bg-red-500/10 px-4 py-3 rounded-xl border border-red-500/30">
+                    <span className="text-red-400 font-medium text-sm">{challenge.impact}</span>
                   </div>
                 </div>
               </div>
@@ -76,12 +77,12 @@ const ChallengesSection = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 rounded-xl max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-2">⚠️ Quanto Isso Está Custando?</h3>
-            <p className="text-lg">
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-red-500/10 to-red-600/10 backdrop-blur-sm border border-red-500/30 text-white p-8 rounded-3xl max-w-3xl mx-auto">
+            <h3 className="text-3xl font-light mb-4">⚠️ Quanto Isso Está Custando?</h3>
+            <p className="text-lg font-light text-gray-300">
               Cada dia sem IA representa milhares em oportunidades perdidas. 
-              <strong> Não deixe seus concorrentes saírem na frente!</strong>
+              <strong className="text-red-400"> Não deixe seus concorrentes saírem na frente!</strong>
             </p>
           </div>
         </div>
