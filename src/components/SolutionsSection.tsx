@@ -47,7 +47,7 @@ const SolutionsSection = () => {
     <section className="py-32 bg-black">
       <div className="container mx-auto px-6 mb-20">
         <div className="text-center">
-          <h2 className="text-5xl lg:text-7xl font-thin text-white mb-8 tracking-tight">
+          <h2 className="text-5xl lg:text-7xl font-thin text-red-500 mb-8 tracking-tight">
             Soluções de <span className="text-red-500 glow-red font-extralight">IA Sob Medida</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto font-light leading-relaxed">
@@ -68,7 +68,7 @@ const SolutionsSection = () => {
           </p>
           <button 
             onClick={handleWhatsAppClick}
-            className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-light py-4 px-8 rounded-2xl transition-all duration-500 hover:scale-105 flex items-center justify-center gap-3 border border-red-400/20 mx-auto"
+            className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-red-500 font-light py-4 px-8 rounded-2xl transition-all duration-500 hover:scale-105 flex items-center justify-center gap-3 border border-red-400/20 mx-auto"
           >
             Implementar Agora
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
