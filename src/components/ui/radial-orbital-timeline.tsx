@@ -168,7 +168,7 @@ export default function RadialOrbitalTimeline({
             transform: `translate(${centerOffset.x}px, ${centerOffset.y}px)`,
           }}
         >
-          <div className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-teal-500 animate-pulse flex items-center justify-center z-10">
+          <div className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-red-500 via-red-600 to-red-700 animate-pulse flex items-center justify-center z-10">
             <div className="absolute w-20 h-20 rounded-full border border-white/20 animate-ping opacity-70"></div>
             <div
               className="absolute w-24 h-24 rounded-full border border-white/10 animate-ping opacity-50"
