@@ -1,10 +1,11 @@
-
 import { MessageCircle, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/5521983505240", "_blank");
   };
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-950 border-t border-gray-800">
@@ -71,10 +72,10 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-16 pt-12">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 font-light text-lg">
-              © 2024 MarketIA. Todos os direitos reservados.
+              © {currentYear} MarketIA. Todos os direitos reservados.
             </p>
             <p className="text-gray-500 font-light mt-6 md:mt-0 text-lg">
-              Desenvolvido com IA e inovação
+              Desenvolvido por Marketi9
             </p>
           </div>
         </div>
