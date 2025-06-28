@@ -1,4 +1,3 @@
-
 import { Clock, Users, Settings, Heart, Calendar, Cpu, Wrench, User, FileText, BarChart3 } from "lucide-react";
 import RadialOrbitalTimeline from "@/components/ui/radial-orbital-timeline";
 
@@ -131,6 +130,14 @@ const SolutionsSection = () => {
       </div>
       
       <RadialOrbitalTimeline timelineData={timelineData} />
+      
+      <div className="container mx-auto px-6 mt-16">
+        <div className="text-center">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto font-light">
+            ✨ <span className="text-red-400 font-medium">Explore nossa timeline interativa</span> clicando nos pontos ao redor do centro para descobrir cada fase da nossa solução de IA
+          </p>
+        </div>
+      </div>
     </section>
   );
 };
