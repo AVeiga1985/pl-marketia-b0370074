@@ -1,5 +1,6 @@
 
 import { Scissors } from "lucide-react";
+import ExpandableSuccessCases from "@/components/ui/expandable-success-cases";
 
 const MiniCasesSection = () => {
   const cases = [
@@ -34,65 +35,7 @@ const MiniCasesSection = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-1 gap-8 max-w-5xl mx-auto">
-          {cases.map((case_, index) => (
-            <div 
-              key={index}
-              className="bg-black/40 backdrop-blur-sm rounded-3xl p-10 border border-gray-800 hover:border-red-500/50 transition-all duration-700 group hover:transform hover:-translate-y-4 hover:shadow-2xl hover:shadow-red-500/20"
-            >
-              {/* Header */}
-              <div className="flex items-start gap-8 mb-10">
-                <div className={`bg-gradient-to-r ${case_.color} p-5 rounded-3xl group-hover:scale-110 transition-transform duration-500`}>
-                  <case_.icon className="w-10 h-10 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-3xl font-light text-white mb-3">{case_.company}</h3>
-                  <span className="text-gray-400 font-light text-lg">{case_.segment}</span>
-                </div>
-              </div>
-              
-              {/* Challenge */}
-              <div className="mb-8">
-                <h4 className="text-red-400 font-light mb-4 text-xl">Desafio:</h4>
-                <p className="text-gray-300 leading-relaxed font-light text-lg">{case_.challenge}</p>
-              </div>
-              
-              {/* Solution */}
-              <div className="mb-10">
-                <h4 className="text-blue-400 font-light mb-4 text-xl">Solução MarketIA:</h4>
-                <p className="text-gray-300 leading-relaxed font-light text-lg">{case_.solution}</p>
-              </div>
-              
-              {/* Results */}
-              <div className="mb-10">
-                <h4 className="text-green-400 font-light mb-6 text-xl">Resultados:</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {case_.results.map((result, resultIndex) => (
-                    <div key={resultIndex} className="bg-gray-800/30 rounded-2xl p-5 border border-gray-700 hover:border-red-500/30 transition-colors duration-300">
-                      <span className="text-white font-light text-lg">{result}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Testimonial */}
-              {case_.testimonial && (
-                <div className="mb-8">
-                  <div className="bg-gray-800/20 rounded-2xl p-8 border border-gray-700">
-                    <p className="text-gray-300 italic leading-relaxed mb-6 text-lg font-light">"{case_.testimonial}"</p>
-                    <p className="text-gray-400 font-light">— {case_.author}</p>
-                  </div>
-                </div>
-              )}
-              
-              {/* Highlight */}
-              <div className={`bg-gradient-to-r ${case_.color} p-8 rounded-3xl text-center group-hover:shadow-lg transition-all duration-500`}>
-                <div className="text-4xl font-thin text-white mb-3">{case_.highlight}</div>
-                <div className="text-white/80 font-light text-lg">Redução no Tempo de Espera</div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ExpandableSuccessCases cases={cases} />
       </div>
     </section>
   );
